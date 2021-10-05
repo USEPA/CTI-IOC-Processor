@@ -1,0 +1,8 @@
+{% for sha1 in hash_sha1 -%}
+{% if loop.first -%}
+DeviceFileEvents
+| where SHA1 =~ "{{sha1}}"
+{%- else %}
+or SHA1 =~ "{{sha1}}"
+{%- endif %}
+{%- endfor %}

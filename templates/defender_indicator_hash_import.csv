@@ -1,0 +1,11 @@
+{# Header for the CSV file -#}
+IndicatorType,IndicatorValue,ExpirationTime,Action,Severity,Title,Description,RecommendedActions,RbacGroups,Category,MitreTechniques,GenerateAlert
+{% for md5 in hash_md5 -%}
+FileMd5,{{md5}},{{ninety_days}},BlockAndRemediate,Low,"<Your Title>","<Your Description>","<Your Recommended Actions>","","","","TRUE"
+{% endfor -%}
+{% for sha1 in hash_sha1 -%}
+FileSha1,{{sha1}},{{ninety_days}},BlockAndRemediate,Low,"<Your Title>","<Your Description>","<Your Recommended Actions>","","","","TRUE"
+{% endfor -%}
+{% for sha256 in hash_sha256 -%}
+FileSha256,{{sha256}},{{ninety_days}},BlockAndRemediate,Low,"<Your Title>","<Your Description>","<Your Recommended Actions>","","","","TRUE"
+{% endfor -%}

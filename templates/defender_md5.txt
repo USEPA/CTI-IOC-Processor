@@ -1,0 +1,8 @@
+{% for md5 in hash_md5 -%}
+{% if loop.first -%}
+DeviceFileEvents
+| where MD5 =~ "{{md5}}"
+{%- else %}
+or MD5 =~ "{{md5}}"
+{%- endif %}
+{%- endfor %}

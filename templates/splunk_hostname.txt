@@ -1,0 +1,9 @@
+{% for fqdn in fqdns -%}
+{% if loop.first -%}
+index="<Your Index>" hostname IN ("{{fqdn}}"
+{%- elif loop.last -%}
+,"{{fqdn}}")
+{%- else -%}
+,"{{fqdn}}"
+{%- endif %}
+{%- endfor %}

@@ -1,0 +1,53 @@
+IB Number:
+-------------
+{%- for valueStr in ib %}
+{{valueStr}}
+{%- endfor %}
+
+IPv4 Address:
+-------------
+{%- for valueStr in ipv4 %}
+{{valueStr}}
+{%- endfor %}
+
+IPv6 Address:
+-------------
+{%- for valueStr in ipv6 %}
+{{valueStr}}
+{%- endfor %}
+
+URL:
+-------------
+{%- for valueStr in urls %}
+{{valueStr}}
+{%- endfor %}
+
+FQDN:
+-------------
+{%- for valueStr in fqdns %}
+{{valueStr}}
+{%- endfor %}
+
+Message ID:
+-------------
+{%- for valueStr in email_senders %}
+{{valueStr}}
+{%- endfor %}
+
+SHA256:
+-------------
+{%- for valueStr in hash_sha256 %}
+{{valueStr}}
+{%- endfor %}
+
+Sha1:
+-------------
+{%- for valueStr in hash_sha1 %}
+{{valueStr}}
+{%- endfor %}
+
+MD5:
+-------------
+{%- for valueStr in hash_md5 %}
+{{valueStr}}
+{%- endfor %}

@@ -1,0 +1,8 @@
+{% for ip in ipv6 -%}
+{% if loop.first -%}
+DeviceNetworkEvents
+| where RemoteIP == "{{ip}}"
+{%- else %}
+or RemoteIP == "{{ip}}"
+{%- endif %}
+{%- endfor %}

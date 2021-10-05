@@ -1,0 +1,9 @@
+{% for ip in ipv6 -%}
+{% if loop.first -%}
+index="<Your Index>" src IN ("{{ip}}"
+{%- elif loop.last -%}
+,"{{ip}}")
+{%- else -%}
+,"{{ip}}"
+{%- endif %}
+{%- endfor %}

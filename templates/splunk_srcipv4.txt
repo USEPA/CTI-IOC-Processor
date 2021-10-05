@@ -1,0 +1,9 @@
+{% for ip in ipv4 -%}
+{% if loop.first -%}
+index="<Your Index>" action!=blocked src IN ("{{ip}}"
+{%- elif loop.last -%}
+,"{{ip}}")
+{%- else -%}
+,"{{ip}}"
+{%- endif %}
+{%- endfor %}

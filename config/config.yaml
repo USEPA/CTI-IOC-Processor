@@ -1,0 +1,21 @@
+# YAML config file for process_iocs.py, compiled to process_iocs.exe for Windows
+---
+  input_dir: 'input'
+  template_dir: 'templates'
+  output_dir: 'output'
+  output_dir_date_format: '%Y-%m-%d'
+  ioc_input_filename: 'ioc.txt'
+  ioc_error_filename: 'ioc.error.txt'
+  # The following regex lines are used to determine the type of IOC
+  # on each line in <ioc_input_filename>
+  # We assume the data provided is valid, 
+  # the regexes are not designed to validate the data.
+  md5_regex: '([a-fA-F\d]{32})'
+  sha1_regex: '([a-fA-F\d]{40})'
+  sha256_regex: '([a-fA-F\d]{64})'
+  ipv4_regex: '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
+  ipv6_regex: '(?:[A-F0-9]{1,4}:){7}[A-F0-9]{1,4}'
+  email_regex: '[\S]+@\S+\.\S+'  # contains @ followed by .
+  url_regex: '[a-zA-Z]+://.+'  # contains letters followed by ://
+  domain_regex: '[\w\-\.]+\.[\w]+'
+...

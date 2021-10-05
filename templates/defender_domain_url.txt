@@ -1,0 +1,10 @@
+{# Combine the fqdns and urls sets and process them in a single loop. -#}
+{# This makes it easier to to determine the first item being processed. -#}
+{% for item in fqdns + urls -%}
+{% if loop.first -%}
+DeviceNetworkEvents
+| where RemoteUrl contains "{{item}}"
+{%- else %}
+or RemoteUrl contains "{{item}}"
+{%- endif %}
+{%- endfor %}

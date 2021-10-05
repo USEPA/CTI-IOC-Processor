@@ -1,0 +1,5 @@
+{# Header for the CSV file -#}
+IndicatorType,IndicatorValue,ExpirationTime,Action,Severity,Title,Description,RecommendedActions,RbacGroups,Category,MitreTechniques,GenerateAlert
+{% for ip in ipv4 -%}
+IpAddress,{{ip}},{{ninety_days}},BlockAndRemediate,Informational,"<Your Title>","<Your Description>","<Your Recommended Actions>",,,,"TRUE"
+{% endfor -%}

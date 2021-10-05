@@ -1,0 +1,8 @@
+{% for sha256 in hash_sha256 -%}
+{% if loop.first -%}
+DeviceFileEvents
+| where SHA256 =~ "{{sha256}}"
+{%- else %}
+or SHA256 =~ "{{sha256}}"
+{%- endif %}
+{%- endfor %}

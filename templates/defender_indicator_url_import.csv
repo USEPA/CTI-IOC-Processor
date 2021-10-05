@@ -1,0 +1,8 @@
+{# Header for the CSV file -#}
+IndicatorType,IndicatorValue,ExpirationTime,Action,Severity,Title,Description,RecommendedActions,RbacGroups,Category,MitreTechniques,GenerateAlert
+{% for fqdn in fqdns -%}
+DomainName,{{fqdn}},{{ninety_days}},BlockAndRemediate,Low,"<Your Title>","<Your Description>","<Your Recommended Actions>","","","","TRUE"
+{% endfor -%}
+{% for url in urls -%}
+Url,{{url}},{{ninety_days}},BlockAndRemediate,Low,"<Your Title>","<Your Description>","<Your Recommended Actions>","","","","TRUE"
+{% endfor -%}

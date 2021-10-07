@@ -1,4 +1,4 @@
-Created by Aaron Graland and Joe Diver, with CSIRC at the USEPA
+Created by Aaron Garland and Joe Diver, with CSIRC at the USEPA
 
 The program process_iocs extracts IOCs manually added to ioc.txt and from STIX XML files that are located in the input directory.  It uses the files in the templates directory to create the output files which are typically queries or .csv files.  The templates use Jinja2 syntax.  Instructions for creating and modifying templates will be added later.
 
